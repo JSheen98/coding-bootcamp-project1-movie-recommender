@@ -1,0 +1,21 @@
+/* Map styling */
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+#map-modal-window {
+    border-radius: 6px;
+}
+
+/* @media screen and (max-width: 647px) {
+    
+    #map input {
+       width: 100px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #map {
+        width: 100%;
+    }
