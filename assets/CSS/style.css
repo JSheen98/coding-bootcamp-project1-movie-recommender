@@ -1,3 +1,97 @@
+<<<<<<< feature/modal-button-fixed
+/* Map styling */
+#map-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+}
+
+#map-modal-window {
+  border-radius: 6px;
+}
+
+/* Sidebar Styling */
+.sidenav {
+  height: 100%;
+  width: 23%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(96, 93, 93);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f7f1f1;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: rgb(128, 0, 0);
+}
+
+.main {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+.input {
+  max-width: 90%;
+  margin-left: 5%;
+  margin-bottom: 3%;
+  background-color: #bfbebe;
+}
+
+.active {
+  background-color: rgb(159, 83, 83);
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #4a4949;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* @media screen and (max-width: 647px) {
+    
+    #map input {
+       width: 100px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #map {
+        width: 100%;
+    }
+body {
+    font-family: "Lato", sans-serif;
+  } */
+=======
 body {
     font-family: "Lato", sans-serif;
   }
@@ -60,3 +154,4 @@ body {
     float: right;
     padding-right: 8px;
 }
+>>>>>>> main

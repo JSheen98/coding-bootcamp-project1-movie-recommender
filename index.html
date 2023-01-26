@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Recommender</title>
+<<<<<<< feature/modal-button-fixed
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+  </head>
+
+  
+  <body>
+    <!-- Side navigation element -->
+    <div class="sidenav">
+      <input class="input is-rounded" type="text" placeholder="Search..." />
+      <a href="#">Top 10</a>
+      <button class="dropdown-btn">Genres<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-container">
+        <a href="#">Comedy</a>
+        <a href="#">Action</a>
+        <a href="#">Romance</a>
+        <a href="#">Horror</a>
+        <a href="#">Drama</a>
+        <a href="#">Sci-Fi</a>
+      </div>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- Modal button -->
+    <button id="map-button" class="button is-primary">Search for Movie Theaters with Google Maps!</button>
+
+    <!-- Map Modal -->
+    <div id="map-modal" class="modal">
+      <div id="map-modal-bg" class="modal-background"></div>
+      <div id="map-modal-window" class="modal-content has-background-white py-5 px-5">
+        <h3 class="title mb-6">Search for nearby movie theaters</h3>
+        <p>Hint: Type a location or keyword (such as 'theater') in the search, and press enter!</p>
+        <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Search Box"
+      />
+      <div id="map"></div>
+      </div>
+    </div>
+
+    <!-- Script links -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApfzRyHOsuR2emj4jpBPOvezNP1xFDm28&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
+    <script src="./assets/JS/googapi.js"></script>
+=======
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/CSS/style.css">
 </head>
@@ -29,6 +81,7 @@
         </div>
                
     
+>>>>>>> main
     <script src="./assets/JS/script.js"></script>
-</body>
+  </body>
 </html>
