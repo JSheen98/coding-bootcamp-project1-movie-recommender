@@ -28,3 +28,22 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+
+
+// searchbar logic
+
+var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById('myInput').value
+    console.log(document.getElementById('myInput').value);
+  }
+});
+
+var search = document.getElementById("myBtn");
+search.addEventListener('click', (event) => {
+  document.getElementById('myInput').value
+  console.log(document.getElementById('myInput').value)
+
+});
