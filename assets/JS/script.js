@@ -1,4 +1,3 @@
-<<<<<<< feature/modal-button-fixed
 // Map modal query selectors
 const mapButton = document.querySelector('#map-button')
 const mapModalBg = document.querySelector('#map-modal-bg')
@@ -15,8 +14,6 @@ mapModalBg.addEventListener('click', function() {
 })
 
 
-=======
->>>>>>> main
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 
@@ -30,8 +27,4 @@ for (i = 0; i < dropdown.length; i++) {
       dropdownContent.style.display = "block";
     }
   });
-<<<<<<< feature/modal-button-fixed
 }
-=======
-}
->>>>>>> main
