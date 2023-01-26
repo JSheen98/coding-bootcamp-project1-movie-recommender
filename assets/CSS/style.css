@@ -1,5 +1,10 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+
 /* Map styling */
 #map-button {
+  background-color: rgb(128, 0, 0);
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -123,15 +128,66 @@
   text-overflow: ellipsis;
 }
 
-
-
-
 .column {
   min-width: 225px;
   max-width: 300px;
 }
 
+/* header CSS */
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 500px;
+  padding-right: 50px;
+  background-color: #4a4949;
+  color: #f7f1f1;
+  font-size: 25px;
+}
+
+.nav-links {
+  padding: 28px 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #f7f1f1;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  background: rgb(128, 0, 0);
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* @media screen and (max-width: 647px) {
+    
+    #map input {
+       width: 100px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #map {
+        width: 100%;
+    } */
 
 @media (max-width: 768px) {
   .row-title1 {
@@ -146,62 +202,3 @@
     width: 100%;
   }
 }
-
-/* @media screen and (max-width: 647px) {
-    
-    #map input {
-       width: 100px;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    #map {
-        width: 100%;
-    }
-body {
-    font-family: "Lato", sans-serif;
-  } */
-
-    /* header CSS */
-
-    nav{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 500px;
-      padding-right: 50px;
-      background-color: #4a4949;
-      color:#f7f1f1;
-      font-size: 20px;
-  }
-  
-  .nav-links{
-      padding: 28px 0;
-  }
-  
-  .nav-links li{
-      display: inline-block;
-      margin: 0 15px;
-  }
-  
-  .nav-links li a{
-      text-decoration: none;
-      color: #f7f1f1;
-      padding: 5px 0;
-      position: relative;
-  }
-  
-  .nav-links li a::after{
-      content: '';
-      background: rgb(128, 0, 0);
-      width: 0;
-      height: 2px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transition: width 0.5s;
-  }
-  
-  .nav-links li a:hover::after{
-      width: 100%;
-  }
