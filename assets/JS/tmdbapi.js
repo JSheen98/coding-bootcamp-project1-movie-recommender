@@ -1,3 +1,7 @@
+// Defines card section element variables
+var movieCards1El = document.getElementById("movieCards1");
+var movieCards2El = document.getElementById("movieCards2");
+
 // Defines getMovies function
 function getMovies() {
   // Gets data for movies now playing and sorts by popularity descending
@@ -9,11 +13,16 @@ function getMovies() {
   // Logs array of movies to the console
   .then(function (data) {
     console.log(data.results);
+    // Sets cards to display the posters of the movies from the results
+    for (i = 0; i < movieCards1El.children.length; i++) {
+      movieCards1El.children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/w500" + data.results[i].poster_path + "');");
+    }
+    for (i = 0; i < movieCards2El.children.length; i++) {
+      movieCards2El.children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/w500" + data.results[i + 5].poster_path + "');");
+    }
   });
 }
 
-
-  
 /* ​
 Genre ID list:
   
@@ -44,10 +53,17 @@ var page = 1;
 var pagesTotal = 50;
 var genreSelection = 10751
 
-// Defines clearFilter function
+
+
+// Defines clearFilter function. For when running the filter functions multiple times
 function clearFilter() {
-  // Clears filteredResults array. For when running the filter functions multiple times
+  // Clears filteredResults array
   filteredResults = [];
+  // Clears poster images from cards
+  for (i = 0; i < movieCards2El.children.length; i++) {
+    movieCards2El.children[i].children[0].setAttribute("style", "background-image: none;");
+  }
+  // Sets page back to 1
   page = 1;
   getPage();
 }
@@ -77,6 +93,18 @@ function filterResults(data) {
   }
   // Logs filteredResults array to the console
   console.log(filteredResults);
+  if (filteredResults.length >= 5) {
+    // Sets second row of cards to display the posters of movies from the filtered results
+    for (i = 0; i < movieCards2El.children.length; i++) {
+      movieCards2El.children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/w500" + filteredResults[i].poster_path + "');");
+    }
+  }
+  else if (page >= pagesTotal) {
+    // Sets second row of cards to display the posters of movies from the filtered results
+    for (i = 0; i < movieCards2El.children.length; i++) {
+      movieCards2El.children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/w500" + filteredResults[i].poster_path + "');");
+    }
+  }
 }
   
 // Runs getMovies on page load

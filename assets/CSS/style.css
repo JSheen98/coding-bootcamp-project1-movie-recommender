@@ -97,6 +97,7 @@
   width: 28vw;
   height: 30vh;
   min-width: 201px;
+  background-size: contain;
 }
 
 .container1 {
