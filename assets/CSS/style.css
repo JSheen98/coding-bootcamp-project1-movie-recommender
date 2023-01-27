@@ -3,6 +3,7 @@
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 1;
 }
 
 #map {
@@ -24,7 +25,7 @@
   left: 0;
   background-color: rgb(96, 93, 93);
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .sidenav a,
@@ -160,3 +161,47 @@
 body {
     font-family: "Lato", sans-serif;
   } */
+
+    /* header CSS */
+
+    nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 500px;
+      padding-right: 50px;
+      background-color: #4a4949;
+      color:#f7f1f1;
+      font-size: 20px;
+  }
+  
+  .nav-links{
+      padding: 28px 0;
+  }
+  
+  .nav-links li{
+      display: inline-block;
+      margin: 0 15px;
+  }
+  
+  .nav-links li a{
+      text-decoration: none;
+      color: #f7f1f1;
+      padding: 5px 0;
+      position: relative;
+  }
+  
+  .nav-links li a::after{
+      content: '';
+      background: rgb(128, 0, 0);
+      width: 0;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: width 0.5s;
+  }
+  
+  .nav-links li a:hover::after{
+      width: 100%;
+  }
