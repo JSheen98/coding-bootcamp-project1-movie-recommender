@@ -210,3 +210,15 @@ nav {
     width: 100%;
   }
 }
+
+/*Contact page*/
+
+.contact-info {
+  padding-top: 5%;
+  padding-left: 30%; 
+  
+} 
+
+.contact-name {
+  font-size: 40px;
+}
