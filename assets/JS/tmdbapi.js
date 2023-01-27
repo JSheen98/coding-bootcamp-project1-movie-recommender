@@ -46,6 +46,7 @@ function getMovies() {
 function clearFilter() {
     // Clears filteredResults array. For when running the filter functions multiple times
     filteredResults = [];
+    page = 1;
     getPage();
 }
 
@@ -55,6 +56,7 @@ function clearFilter() {
     var response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=2129d479a91cfa69f8540fc782cf615a&page=${page}`);
     // Parses response into objects and arrays
     var movies = await response.json();
+    console.log(movies);
     // Parsed data is passed as the argument in the filterResults function
     filterResults(movies);
     // The getPage function runs again on the next page results until page 50
