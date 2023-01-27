@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+</head>
+
+<body>
+    
+    <!--Header-->
+    <div class="header">
+        <nav>
+            🎞️ Movie Recommender 🎞️
+            <ul class="nav-links">
+                <li><a href="https://developers.google.com/maps/" target="_blank">Google API</a> </li>
+                <li><a href="https://www.themoviedb.org/documentation/api" target="_blank"> TMDB API</a> </li>
+            </ul>
+        </nav>
+
+    </div>
+    
+
+    <!-- Side navigation element-->
+    <div class="sidenav">
+
+      <form action="">
+          <input id="myInput" class="input is-rounded" type="text" placeholder="Search...">
+          <button id="myBtn" onclick="" id="search-btn" type="submit">🔍</button> 
+        </form>
+          
+        
+      <a id=topTen>Top 10</a>
+      <button class="dropdown-btn">Genres <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-container">
+        <a id="action">Action</a>
+        <a id="adventure">Adventure</a>
+        <a id="animation">Animation</a>
+        <a id="comedy">Comedy</a>
+        <a id="crime">Crime</a>
+        <a id="documentary">Documentary</a>
+        <a id="drama">Drama</a>
+        <a id="family">Family</a>
+        <a id="fantasy">Fantasy</a>
+        <a id="history">History</a>
+        <a id="horror">Horror</a>
+        <a id="music">Music</a>
+        <a id="mystery">Mystery</a>
+        <a id="romance">Romance</a>
+        <a id="scienceFiction">Science Fiction</a>
+        <a id="thriller">Thriller</a>
+        <a id="tvMovie">TV Movie</a>
+        <a id="war">War</a>
+        <a id="western">Western</a>
+      </div>
+      <a id=about href="#">About</a>
+      <a id=contact href="/index.html">Contact</a>
+ 
+    </div> 
+
+    <!--Contact Info-->
+    <div class="contact-info">
+        <p class="contact-name">Devon Ethington</p>
+            <ul class="contact-links">
+                <li><a href="https://github.com/Mersopolis" target="_blank">GitHub</a> </li>
+                <li><a href="mailto:dclarkjenkins87@gmail.com">Email</a></li>
+            </ul>
+        <p class="contact-name">Mason Aviano</p>
+            <ul class="contact-links">
+                <li><a href="https://github.com/Wodaloo" target="_blank">GitHub</a> </li>
+                <li><a href="mailto:dclarkjenkins87@gmail.com">Email</a></li>
+            </ul>
+        <p class="contact-name">Daniel Jenkins</p>
+            <ul class="contact-links">
+                <li><a href="https://github.com/Teaom" target="_blank">GitHub</a> </li>
+                <li><a href="mailto:dclarkjenkins87@gmail.com">dclarkjenkins87@gmail.com</a></li>
+            </ul>
+        <p class="contact-name">Dukane Golder</p>
+            <ul class="contact-links">
+                <li><a href="https://github.com/dukanegolder" target="_blank">GitHub</a> </li>
+                <li><a href="mailto:dclarkjenkins87@gmail.com">Email</a></li>
+            </ul>
+        <p class="contact-name">Jackson Sheen</p>
+            <ul class="contact-links">
+                <li><a href="https://github.com/JSheen98" target="_blank">GitHub</a> </li>
+                <li><a href="mailto:dclarkjenkins87@gmail.com">Email</a></li>
+            </ul>
+
+
+    </div>
+
+
+    
+
+
+
+     <!-- Script links -->
+     <script
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApfzRyHOsuR2emj4jpBPOvezNP1xFDm28&callback=initAutocomplete&libraries=places&v=weekly"
+     defer></script>
+ <script src="./assets/JS/tmdbapi.js"></script>
+ <script src="./assets/JS/googapi.js"></script>
+ <script src="./assets/JS/script.js"></script>
+</body>
+
+</html>
