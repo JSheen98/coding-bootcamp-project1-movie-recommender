@@ -66,13 +66,13 @@
   background-color: #bfbebe;
 }
 
-#myBtn{
+#myBtn {
   background-color: rgb(96, 93, 93);
   font-size: larger;
   margin-top: 1.5%;
   margin-left: 2%;
   cursor: pointer;
-  border: 0; 
+  border: 0;
 }
 
 .active {
@@ -102,41 +102,34 @@
 .container1 {
   display: flex;
   justify-content: flex-end;
-  margin-left: 150px;
-  margin-top: 200px;
+  margin-left: 27vw;
+  margin-top: 100px;
 }
 
 .container2 {
   display: flex;
   justify-content: flex-end;
-  margin-left: 150px;
+  margin-left: 27vw;
 }
 
 .row-title1 {
   display: flex;
   position: relative;
-  text-align: center;
-  left: 26vw;
-  bottom: 5vh;
+  left: 27vw;
   height: 40px;
-  width: 20vw;
+  top: 5vh;
   font-size: 1.8em;
-  /* overflow: hidden; */
-  /* white-space: nowrap; */
-  /* text-overflow: ellipsis; */
+
 }
 
 .row-title2 {
   display: flex;
   position: relative;
   height: 40px;
-  left: 26vw;
+  left: 27vw;
   bottom: 5vh;
-  width: 20vw;
   font-size: 1.8em;
-  /* overflow: hidden; */
-  /* white-space: nowrap; */
-  /* text-overflow: ellipsis; */
+
 }
 
 .column {
