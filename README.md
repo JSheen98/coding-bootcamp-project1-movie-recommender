@@ -7,7 +7,7 @@ With this project, we wanted to create a user friendly website that would allow 
 
 * AS A movie goer
 * I WANT to know what top movies are out, and where to find them
-* SO THAT I find what to watch when I go to the theater
+* SO THAT I can find what to watch when I go to the theater
 
 ## 🖥️ Technologies Used
 
