@@ -33,17 +33,17 @@ for (i = 0; i < dropdown.length; i++) {
 // searchbar logic
 
 var input = document.getElementById("myInput");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById('myInput').value
-    console.log(document.getElementById('myInput').value);
-  }
-});
+var results = []
 
-var search = document.getElementById("myBtn");
-search.addEventListener('click', (event) => {
+var submitForm = document.getElementById("submit-form")
+submitForm.addEventListener('submit', function(event){
+  event.preventDefault()
   document.getElementById('myInput').value
-  console.log(document.getElementById('myInput').value)
+  results.push(input.value)
+  localStorage.setItem("myResults", JSON.stringify(results))
+  console.log(document.getElementById('myInput').value);
+  document.getElementById('myInput').value = ""
+})
 
-});
+
+
