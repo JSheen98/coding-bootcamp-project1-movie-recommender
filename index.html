@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="./assets/CSS/style.css" />
 </head>
 
-
 <body>
+    
     <!--Header-->
     <div class="header">
         <nav>
@@ -29,12 +29,12 @@
     <!-- Side navigation element -->
     <div class="sidenav">
 
-      <form action="">
+      <form id="submit-form" action="">
           <input id="myInput" class="input is-rounded" type="text" placeholder="Search...">
           <button id="myBtn" onclick="" id="search-btn" type="submit">🔍</button> 
         </form>
           
-        
+
       <a id=topTen>Top 10</a>
       <button class="dropdown-btn">Genres <i class="fa fa-caret-down"></i></button>
       <div class="dropdown-container">
@@ -59,7 +59,7 @@
         <a id="western">Western</a>
       </div>
       <a id="about" href="#about-footer">About</a>
-      <a id="contact" href="#">Contact</a>
+      <a id="contact" href="/Contact.html">Contact</a>
  
     </div>
 
@@ -79,51 +79,20 @@
 
     <!-- Movie 'Card' Holder -->
     <section class="section1">
-        <div class="row-title1">Top Movies Playing in Theaters</div>
+        <div class="row-title1">Now Playing in Theaters</div>
         <div class="container1">
-            <div class="row-title1">Top Movies Playing in Theaters</div>
-            <div id="movieCards1" class="columns is-multiline is-mobile">
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="columns is-multiline is-mobile">
+                <div id="card-1" class="column is-one-fifth"></div>
+                <div id="card-2" class="column is-one-fifth"></div>
+                <div id="card-3" class="column is-one-fifth"></div>
+                <div id="card-4" class="column is-one-fifth"></div>
+                <div id="card-5" class="column is-one-fifth"></div>
             </div>
         </div>
     </section>
 
     <section class="section2">
-        <div class="row-title2">Top 5 Action Genre </div>
+        <div class="row-title2">Top 5 Action Genre</div>
         <div class="container2">
             <div class="row-title2">Top 5 Action Genre </div>
             <div id="movieCards2" class="columns is-multiline is-mobile">
