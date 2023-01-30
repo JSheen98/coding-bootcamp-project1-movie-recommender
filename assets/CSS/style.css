@@ -110,7 +110,7 @@
   min-width: 201px;
 }
 
-.container1 {
+#container1 {
   display: flex;
   padding-right: 40px;
   justify-content: flex-end;
@@ -118,30 +118,26 @@
   margin-top: 100px;
 }
 
-.container2 {
+#container2 {
   display: flex;
   justify-content: flex-end;
   margin-left: 27vw;
 }
 
-.row-title1 {
+.rowTitle {
   display: flex;
   position: relative;
   left: 27vw;
   height: 40px;
-  top: 5vh;
   font-size: 1.8em;
-
 }
 
-.row-title2 {
-  display: flex;
-  position: relative;
-  height: 40px;
-  left: 27vw;
-  bottom: 5vh;
-  font-size: 1.8em;
+#row1Title {
+  top: 5vh;
+}
 
+#row2Title {
+  bottom: 5vh;
 }
 
 .column {

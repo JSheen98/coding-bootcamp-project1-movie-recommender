@@ -44,30 +44,3 @@ submitForm.addEventListener('submit', function (event) {
   console.log(document.getElementById('myInput').value);
   document.getElementById('myInput').value = ""
 })
-
-//https://api.themoviedb.org/3/discover/movie?api_key=2129d479a91cfa69f8540fc782cf615a&with_genres=28
-
-var option = document.querySelectorAll(".option")
-console.log(option)
-for (var i = 0; i < option.length; i++) {
-
-  option[i].addEventListener("click", function () {
-    console.log(this.getAttribute("id"))
-    getmoviesbygenre(this.getAttribute("id"))
-  })
-}
-function getmoviesbygenre(genre_id) {
-  fetch("https://api.themoviedb.org/3/discover/movie?api_key=2129d479a91cfa69f8540fc782cf615a&with_genres=" + genre_id)
-    .then(function (response) {
-      return response.json();
-    })
-    // Logs array of movies to the console
-    .then(function (data) {
-      // console.log(data.results);
-      for (var i = 0; i < 5; i++) {
-        console.log(data.results[i])
-
-      }
-    });
-}
-
