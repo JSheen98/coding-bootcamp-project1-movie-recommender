@@ -6,14 +6,18 @@
 #map-button {
   background-color: rgb(128, 0, 0);
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 2%;
+  right: 2%;
   z-index: 1;
 }
 
 #map {
   height: 300px;
   width: 100%;
+}
+
+.section1 {
+  padding-top: 5%;
 }
 
 #map-modal-window {
@@ -23,7 +27,7 @@
 /* Sidebar Styling */
 .sidenav {
   height: 100%;
-  width: 23%;
+  width: 20%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -33,9 +37,14 @@
   padding-top: 25px;
 }
 
-/* footer {
-  background-color: #4a4949;
-} */
+footer {
+  width: 80%;
+  float: right;
+}
+
+footer p{
+  text-align: center;
+}
 
 .sidenav a,
 .dropdown-btn {
@@ -148,6 +157,8 @@
 /* header CSS */
 
 nav {
+  width: 80%;
+  float: right;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -189,17 +200,17 @@ nav {
   width: 100%;
 }
 
-/* @media screen and (max-width: 647px) {
-    
-    #map input {
-       width: 100px;
-    }
-}
+/*Contact page*/
 
-@media screen and (max-width: 300px) {
-    #map {
-        width: 100%;
-    } */
+.contact-info {
+  padding-top: 5%;
+  padding-left: 30%; 
+  
+} 
+
+.contact-name {
+  font-size: 40px;
+}
 
 @media (max-width: 768px) {
   .row-title1 {
@@ -215,14 +226,20 @@ nav {
   }
 }
 
-/*Contact page*/
+@media screen and (max-width: 1089px) {
+  nav {
+    font-size: 15px;
+  }
+}
 
-.contact-info {
-  padding-top: 5%;
-  padding-left: 30%; 
-  
-} 
+@media screen and (max-width: 1089px) {
+  nav {
+    font-size: 15px;
+  }
+}
 
-.contact-name {
-  font-size: 40px;
+@media screen and (max-width: 1476px) {
+  .section1 {
+    padding-top: 15%;
+  }
 }
