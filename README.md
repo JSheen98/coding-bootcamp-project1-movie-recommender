@@ -30,7 +30,7 @@ https://jsheen98.github.io/coding-bootcamp-project1-movie-recommender/
 
 The following images represent the website's appearance:
 
-![Movie Recommender Website]()
+![Movie Recommender Website](./assets/Images/movie-recommender-ss.jpg)
 
 ## 👥 Collaborators
 
