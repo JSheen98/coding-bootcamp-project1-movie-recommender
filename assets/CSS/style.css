@@ -83,6 +83,10 @@ footer p{
   background-color: #bfbebe;
 }
 
+#home{
+  color: black;
+}
+
 #myBtn {
   background-color: rgb(96, 93, 93);
   font-size: larger;
