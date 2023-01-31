@@ -17,7 +17,11 @@
 }
 
 .section1 {
-  padding-top: 5%;
+  padding-top: 15px;
+}
+
+.section-search {
+  padding-top: 7%;
 }
 
 #map-modal-window {
@@ -133,20 +137,33 @@ footer p{
   margin-left: 27vw;
 }
 
+#containerSearch {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 27vw;
+}
+
 .rowTitle {
+  padding-left: 25%;
+  width: 80%;
+  float: right;
   display: flex;
   position: relative;
-  left: 27vw;
+  /* left: 27vw; TODO */
   height: 40px;
   font-size: 1.8em;
 }
 
 #row1Title {
-  top: 5vh;
+  bottom: 5vh;
 }
 
 #row2Title {
   bottom: 5vh;
+}
+
+#rowSearchTitle {
+  bottom: 2vh;
 }
 
 .column {
@@ -162,8 +179,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 500px;
-  padding-right: 50px;
+  /* padding-left: 500px;  TODO*/
+  /* padding-right: 50px; TODO*/
   background-color: #4a4949;
   color: #f7f1f1;
   font-size: 25px;
@@ -198,6 +215,10 @@ nav {
 
 .nav-links li a:hover::after {
   width: 100%;
+}
+
+nav h3 {
+  padding-left: 15%;
 }
 
 /*Contact page*/
@@ -242,4 +263,23 @@ nav {
   .section1 {
     padding-top: 15%;
   }
+}
+
+@media screen and (max-width: 751px) {
+  /* TODO: sidebar position */
+}
+
+@media screen and (max-width: 591px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav h3 {
+    padding-top: 10px;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* TODO: button-size  */
 }
