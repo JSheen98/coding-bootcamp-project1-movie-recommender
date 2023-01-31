@@ -41,8 +41,8 @@ top10El.addEventListener("click", function() {
 
 // Sets pastSearches array from localStorage, if exists
 var pastSearches = [];
-if (localStorage.getItem(JSON.parse("pastSearchStorage"))) {
-  pastSearches = localStorage.getItem(JSON.parse("pastSearchStorage"));
+if (JSON.parse(localStorage.getItem("pastSearchStorage"))) {
+  pastSearches = JSON.parse(localStorage.getItem("pastSearchStorage"));
 }
 
 // Submitting a search saves it to localStorage for future reuse and displays movies with names matching the search query
@@ -53,14 +53,25 @@ submitForm.addEventListener('submit', function(event) {
   // Pushes search query to the pastSearches array
   console.log(input.value);
   pastSearches.push(input.value);
-
+  // Gets data for movies
   fetch("https://api.themoviedb.org/3/search/movie?api_key=" + apiKey + "&language=en-US&query=" + encodeURI(input.value) + "&page=1&include_adult=false")
   // Parses response
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
-    
+    // Checks for valid data
+    if (data.results) {
+      // Sets text for row 2 title
+      row2TitleEl.textContent = "Search Results";
+      // Sets second row of cards to display the posters of movies from the results
+      for (i = 0; i < container2El.children[0].children.length; i++) {
+        container2El.children[0].children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/original" + data.results[i].poster_path + "');");
+      }
+    }
+    else {
+      console.log("Search function failure");
+    }
   });
   // Sets pastSearches as an item in localStorage
   localStorage.setItem("pastSearchStorage", JSON.stringify(pastSearches));
