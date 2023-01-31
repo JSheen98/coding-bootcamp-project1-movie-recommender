@@ -52,7 +52,6 @@ for (var i = 0; i < optionEl.length; i++) {
     row2TitleEl.textContent = "Top 5 " + this.textContent + " Movies Now Playing in Theaters";
     // genreSelection variable is set to the corresponding TMDB genre id
     genreSelection = parseInt(this.getAttribute("id"));
-    console.log(genreSelection);
     // Runs clearFilter function
     clearFilter();
   })
@@ -63,7 +62,6 @@ function clearFilter() {
   // Clears filteredResults array
   filteredResults = [];
   // Clears poster images from cards
-  console.log(container2El.children[0].children);
   for (i = 0; i < container2El.children[0].children.length; i++) {
     container2El.children[0].children[i].children[0].setAttribute("style", "background-image: none;");
   }
@@ -92,7 +90,6 @@ function filterResults(data) {
       // Checks for valid results
       if (!data.results[i]) {
         // Sets second row of cards to display the posters of movies from the filtered results
-        console.log(container2El.children[0].children);
         for (i = 0; i < container2El.children[0].children.length; i++) {
           container2El.children[0].children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/original" + filteredResults[i].poster_path + "');");
         }
@@ -102,8 +99,6 @@ function filterResults(data) {
         filteredResults.push(data.results[i]);
       }
     }
-    // Logs filteredResults array to the console
-    console.log(filteredResults);
     // Checks if length of filteredResults array is less than 5
     if (filteredResults.length < 5) {
       // Checks if current page is less than total pages
@@ -111,12 +106,10 @@ function filterResults(data) {
       if (page < pagesTotal) {
         // Runs getPage function again for next page
         page++;
-        console.log(page)
         getPage();
       }
       else {
         // Sets second row of cards to display the posters of movies from the filtered results
-        console.log(container2El.children[0].children);
         for (i = 0; i < container2El.children[0].children.length; i++) {
           container2El.children[0].children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/original" + filteredResults[i].poster_path + "');");
         }
@@ -124,14 +117,12 @@ function filterResults(data) {
     }
     else {
       // Sets second row of cards to display the posters of movies from the filtered results
-      console.log(container2El.children[0].children);
       for (i = 0; i < container2El.children[0].children.length; i++) {
         container2El.children[0].children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/original" + filteredResults[i].poster_path + "');");
       }
     }
   }
   else {
-    console.log("filterResults function failure")
     return
   }
 }
