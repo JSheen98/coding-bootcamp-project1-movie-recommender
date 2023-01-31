@@ -1,5 +1,5 @@
 // Defines apiKey variable
-var apiKey = '2129d479a91cfa69f8540fc782cf615a';
+var apiKey = "2129d479a91cfa69f8540fc782cf615a";
 
 // Defines element variables
 var container1El = document.getElementById("container1");
@@ -7,6 +7,7 @@ var container2El = document.getElementById("container2");
 var optionEl = document.querySelectorAll(".option");
 var row2TitleEl = document.getElementById("row2Title");
 var top10El = document.getElementById("top10");
+var input = document.getElementById("myInput");
 
 // Defines topMovies function
 function topMovies() {
@@ -16,7 +17,6 @@ function topMovies() {
   .then(function (response) {
     return response.json();
   })
-  // Logs array of movies to the console
   .then(function (data) {
     // Sets row 1 to display the posters of the movies from the results
     for (i = 0; i < container1El.children[0].children.length; i++) {
@@ -39,7 +39,36 @@ top10El.addEventListener("click", function() {
   topMovies();
 });
 
-// Defines initial variables for following functions
+// Sets pastSearches array from localStorage, if exists
+var pastSearches = [];
+if (localStorage.getItem(JSON.parse("pastSearchStorage"))) {
+  pastSearches = localStorage.getItem(JSON.parse("pastSearchStorage"));
+}
+
+// Submitting a search saves it to localStorage for future reuse and displays movies with names matching the search query
+var submitForm = document.getElementById("submit-form")
+submitForm.addEventListener('submit', function(event) {
+  // Prevents page from reloading on submission
+  event.preventDefault();
+  // Pushes search query to the pastSearches array
+  console.log(input.value);
+  pastSearches.push(input.value);
+
+  fetch("https://api.themoviedb.org/3/search/movie?api_key=" + apiKey + "&language=en-US&query=" + encodeURI(input.value) + "&page=1&include_adult=false")
+  // Parses response
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    
+  });
+  // Sets pastSearches as an item in localStorage
+  localStorage.setItem("pastSearchStorage", JSON.stringify(pastSearches));
+  // Clears search bar
+  input.value = "";
+});
+
+// Defines initial values for variables for following functions
 var filteredResults = [];
 var page = 1;
 var pagesTotal = 50;
