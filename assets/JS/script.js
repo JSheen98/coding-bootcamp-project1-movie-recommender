@@ -33,7 +33,7 @@ for (i = 0; i < dropdown.length; i++) {
 // searchbar logic
 var apiKey = '2129d479a91cfa69f8540fc782cf615a';
 var input = document.getElementById("myInput");
-var results = []
+var results = JSON.parse(localStorage.getItem("myResults")) || [];
 var card1Row2 = document.getElementById('card-1')
 var card2Row2 = document.getElementById('card-2')
 var card3Row2 = document.getElementById('card-3')
@@ -91,4 +91,24 @@ submitForm.addEventListener('submit', function (event) {
 })
 
 
+var input = document.getElementById("myInput");
+var recentSearches = document.getElementById("recent-searches");
 
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    // retrieve the results from local storage
+    var results = JSON.parse(localStorage.getItem("myResults")) || [];
+
+    //only allow 5 results
+    results = results.slice(0, 5);
+
+    // create a list of recent searches
+    var list = "";
+    for (var i = 0; i < results.length; i++) {
+      list += "<li>" + results[i] + "</li>";
+    }
+
+    // update the HTML list with the recent searches
+    recentSearches.innerHTML = list;
+  }
+});
