@@ -19,14 +19,12 @@ function topMovies() {
   // Logs array of movies to the console
   .then(function (data) {
     // Sets row 1 to display the posters of the movies from the results
-    console.log(container1El.children[0].children);
     for (i = 0; i < container1El.children[0].children.length; i++) {
       container1El.children[0].children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/original" + data.results[i].poster_path + "');");
     }
     // Sets text for row 2 title
     row2TitleEl.textContent = "Next Top 5";
     // Sets row 2 to display more of the posters of the movies from the results
-    console.log(container2El.children[0].children);
     for (i = 0; i < container2El.children[0].children.length; i++) {
       container2El.children[0].children[i].children[0].setAttribute("style", "background-image: url('https://image.tmdb.org/t/p/original" + data.results[i + 5].poster_path + "');");
     }
