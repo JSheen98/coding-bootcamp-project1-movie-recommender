@@ -6,14 +6,18 @@
 #map-button {
   background-color: rgb(128, 0, 0);
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 2%;
+  right: 2%;
   z-index: 1;
 }
 
 #map {
   height: 300px;
   width: 100%;
+}
+
+.section1 {
+  padding-top: 5%;
 }
 
 #map-modal-window {
@@ -23,7 +27,7 @@
 /* Sidebar Styling */
 .sidenav {
   height: 100%;
-  width: 23%;
+  width: 20%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -33,9 +37,14 @@
   padding-top: 25px;
 }
 
-/* footer {
-  background-color: #4a4949;
-} */
+footer {
+  width: 80%;
+  float: right;
+}
+
+footer p{
+  text-align: center;
+}
 
 .sidenav a,
 .dropdown-btn {
@@ -114,7 +123,7 @@
   min-width: 201px;
 }
 
-.container1 {
+#container1 {
   display: flex;
   padding-right: 40px;
   justify-content: flex-end;
@@ -122,30 +131,26 @@
   margin-top: 100px;
 }
 
-.container2 {
+#container2 {
   display: flex;
   justify-content: flex-end;
   margin-left: 27vw;
 }
 
-.row-title1 {
+.rowTitle {
   display: flex;
   position: relative;
   left: 27vw;
   height: 40px;
-  top: 5vh;
   font-size: 1.8em;
-
 }
 
-.row-title2 {
-  display: flex;
-  position: relative;
-  height: 40px;
-  left: 27vw;
-  bottom: 5vh;
-  font-size: 1.8em;
+#row1Title {
+  top: 5vh;
+}
 
+#row2Title {
+  bottom: 5vh;
 }
 
 .column {
@@ -156,6 +161,8 @@
 /* header CSS */
 
 nav {
+  width: 80%;
+  float: right;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -197,17 +204,17 @@ nav {
   width: 100%;
 }
 
-/* @media screen and (max-width: 647px) {
-    
-    #map input {
-       width: 100px;
-    }
-}
+/*Contact page*/
 
-@media screen and (max-width: 300px) {
-    #map {
-        width: 100%;
-    } */
+.contact-info {
+  padding-top: 5%;
+  padding-left: 30%; 
+  
+} 
+
+.contact-name {
+  font-size: 40px;
+}
 
 @media (max-width: 768px) {
   .row-title1 {
@@ -223,14 +230,20 @@ nav {
   }
 }
 
-/*Contact page*/
+@media screen and (max-width: 1089px) {
+  nav {
+    font-size: 15px;
+  }
+}
 
-.contact-info {
-  padding-top: 5%;
-  padding-left: 30%; 
-  
-} 
+@media screen and (max-width: 1089px) {
+  nav {
+    font-size: 15px;
+  }
+}
 
-.contact-name {
-  font-size: 40px;
+@media screen and (max-width: 1476px) {
+  .section1 {
+    padding-top: 15%;
+  }
 }

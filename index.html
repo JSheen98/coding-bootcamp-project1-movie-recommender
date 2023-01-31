@@ -13,10 +13,11 @@
 </head>
 
 <body>
-    
+
     <!--Header-->
     <div class="header">
         <nav>
+
             <a id="home" href="index.html">🎞️ Movie Recommender 🎞️ </a>
             <ul class="nav-links">
                 <li><a href="https://developers.google.com/maps/" target="_blank">Google API</a> </li>
@@ -29,38 +30,39 @@
     <!-- Side navigation element -->
     <div class="sidenav">
 
-      <form id="submit-form" action="">
-          <input id="myInput" class="input is-rounded" type="text" placeholder="Search...">
-          <button id="myBtn" onclick="" id="search-btn" type="submit">🔍</button> 
+        <form id="submit-form" action="">
+            <input id="myInput" class="input is-rounded" type="text" placeholder="Search...">
+            <button id="myBtn" onclick="" id="search-btn" type="submit">🔍</button>
         </form>
           
 
-      <a id=topTen href="index.html">Top 10</a>
+      <a id=top10>Top 10</a>
       <button class="dropdown-btn">Genres <i class="fa fa-caret-down"></i></button>
       <div class="dropdown-container">
-        <a id="action">Action</a>
-        <a id="adventure">Adventure</a>
-        <a id="animation">Animation</a>
-        <a id="comedy">Comedy</a>
-        <a id="crime">Crime</a>
-        <a id="documentary">Documentary</a>
-        <a id="drama">Drama</a>
-        <a id="family">Family</a>
-        <a id="fantasy">Fantasy</a>
-        <a id="history">History</a>
-        <a id="horror">Horror</a>
-        <a id="music">Music</a>
-        <a id="mystery">Mystery</a>
-        <a id="romance">Romance</a>
-        <a id="scienceFiction">Science Fiction</a>
-        <a id="thriller">Thriller</a>
-        <a id="tvMovie">TV Movie</a>
-        <a id="war">War</a>
-        <a id="western">Western</a>
+        <a id="28" class="option">Action</a>
+        <a id="12" class="option">Adventure</a>
+        <a id="16" class="option">Animation</a>
+        <a id="35" class="option">Comedy</a>
+        <a id="80" class="option">Crime</a>
+        <a id="99" class="option">Documentary</a>
+        <a id="18" class="option">Drama</a>
+        <a id="10751" class="option">Family</a>
+        <a id="14" class="option">Fantasy</a>
+        <a id="36" class="option">History</a>
+        <a id="27" class="option">Horror</a>
+        <a id="10402" class="option">Music</a>
+        <a id="9648" class="option">Mystery</a>
+        <a id="10749" class="option">Romance</a>
+        <a id="878" class="option">Science Fiction</a>
+        <a id="53" class="option">Thriller</a>
+        <a id="10770" class="option">TV Movie</a>
+        <a id="10752" class="option">War</a>
+        <a id="37" class="option">Western</a>
       </div>
       <a id="about" href="#about-footer">About</a>
       <a id="contact" href="Contact.html">Contact</a>
  
+
     </div>
 
     <!-- Modal button -->
@@ -79,65 +81,56 @@
 
     <!-- Movie 'Card' Holder -->
     <section class="section1">
-        <div class="row-title1">Now Playing in Theaters</div>
-        <div class="container1">
+        <div id="row1Title" class="rowTitle">Top 5 Movies Now Playing in Theaters</div>
+        <div id="container1">
             <div class="columns is-multiline is-mobile">
-                <div id="card-1" class="column is-one-fifth"></div>
-                <div id="card-2" class="column is-one-fifth"></div>
-                <div id="card-3" class="column is-one-fifth"></div>
-                <div id="card-4" class="column is-one-fifth"></div>
-                <div id="card-5" class="column is-one-fifth"></div>
+                <div class="column is-one-fifth">
+                  <div class="img-fit card"></div>
+                </div>
+                <div class="column is-one-fifth">
+                  <div class="img-fit card"></div>
+                </div>
+                <div class="column is-one-fifth">
+                  <div class="img-fit card"></div>
+                </div>
+                <div class="column is-one-fifth">
+                  <div class="img-fit card"></div>
+                </div>
+                <div class="column is-one-fifth">
+                  <div class="img-fit card"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section2">
-        <div class="row-title2">Top 5 Action Genre</div>
-        <div class="container2">
-            <div class="columns is-multiline is-mobile">
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content"></div>
-                        </div>
-                    </div>
-                </div>
+        <div id="row2Title" class="rowTitle"></div>
+        <div id="container2">
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <div class="img-fit card"></div>
             </div>
+            <div class="column is-one-fifth">
+              <div class="img-fit card"></div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="img-fit card"></div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="img-fit card"></div>
+            </div>
+            <div class="column is-one-fifth">
+              <div class="img-fit card"></div>
+            </div>
+          </div>
         </div>
     </section>
 
-    <footer id="about-footer" class="footer has-background-dark has-text-white">
+    <footer id="about-footer" class="footer has-background-dark has-text-white is-align-content-end">
         <div class="content has-text-centered">
             <p>
-                <strong class="has-text-white">🎞️ Movie Recommender 🎞️</strong> by Devon Ethington, Dukane Golder, Daniel Jenkins, Mason Aviano, and Jackson Sheen
+                <strong class="has-text-white">🎞️ Movie Recommender 🎞️</strong> by Devon Ethington, Dukane Golder,
+                Daniel Jenkins, Mason Aviano, and Jackson Sheen
             </p>
         </div>
     </footer>
