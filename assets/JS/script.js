@@ -60,20 +60,59 @@ submitForm.addEventListener('submit', function (event) {
         })
         .then(function (data) {
           if (data.results.length == 0) {
+            input.value = ''
             return
           } else {
+            var results1 = 0;
+
             var posterLink = "https://image.tmdb.org/t/p/original/"
-            var poster1 = posterLink + data.results[1].poster_path
-            var poster2 = posterLink + data.results[2].poster_path
-            var poster3 = posterLink + data.results[3].poster_path
-            var poster4 = posterLink + data.results[4].poster_path
-            var poster5 = posterLink + data.results[5].poster_path
+            if (data.results[results1].poster_path == null) {
+              while (data.results[results1].poster_path == null) {
+                results1++
+              }
+            }
+            var poster1 = posterLink + data.results[results1].poster_path
+
+            var results2 = results1 + 1;
+            if (data.results[results2].poster_path == null) {
+              while (data.results[results2].poster_path == null) {
+                results2++
+              }
+            }
+            var poster2 = posterLink + data.results[results2].poster_path
+
+            var results3 = results2 + 1;
+            if (data.results[results3].poster_path == null) {
+              while (data.results[results3].poster_path == null) {
+                results3++
+              }
+            }
+            var poster3 = posterLink + data.results[results3].poster_path
+
+            var results4 = results3 + 1;
+            if (data.results[results4].poster_path == null) {
+              while (data.results[results4].poster_path == null) {
+                results4++
+              }
+            }
+            var poster4 = posterLink + data.results[results4].poster_path
+
+            var results5 = results4 + 1;
+            if (data.results[results5].poster_path == null) {
+              while (data.results[results5].poster_path == null) {
+                results5++
+              }
+            }
+            var poster5 = posterLink + data.results[results5].poster_path
+
             var card1Row2Content = ""
             var card2Row2Content = ""
             var card3Row2Content = ""
             var card4Row2Content = ""
             var card5Row2Content = ""
             var containerTitle = ""
+
+
 
             containerTitle = `<h3 id="rowSearchTitle" class="rowTitle">Search Results...</h3>`
             card1Row2Content += `<div id="card-1" class="img-fit card" style="background-image:url('${poster1}')"></div>`
@@ -106,7 +145,8 @@ var recentSearches = document.getElementById("recent-searches");
 submitForm.addEventListener("submit", function (event) {
   event.preventDefault()
   if (results == '') {
-    return;
+
+    return
   } else {
     // retrieve the results from local storage
     var results = JSON.parse(localStorage.getItem("myResults")) || [];
@@ -118,7 +158,7 @@ submitForm.addEventListener("submit", function (event) {
     var list = '';
 
     for (var i = 0; i < results.length; i++) {
-      list += "<li>" + results[i] + "</li>";
+      list += `<li class="results">${results[i]}</li>`;
     }
   }
   // update the HTML list with the recent searches
@@ -127,12 +167,29 @@ submitForm.addEventListener("submit", function (event) {
 });
 
 function loadLocalStorage() {
+  results = results.slice(0, 5)
   var list = ''
   for (var i = 0; i < results.length; i++) {
-    list += "<li>" + results[i] + "</li>";
+    list += `<li class="results">${results[i]}</li>`;
   }
   recentSearches.innerHTML = list;
 
 }
 
 loadLocalStorage()
+
+
+
+var sidebar = document.querySelector("#side-navigation-bar")
+// Media to remove search bar class
+function removeSidebar(pixelsUnder) {
+  if (pixelsUnder.matches) {
+    sidebar.classList.remove("sidenav")
+  } else {
+    sidebar.classList.add("sidenav")
+  }
+}
+var pixelsUnder = window.matchMedia("(max-width: 751px)")
+removeSidebar(pixelsUnder)
+pixelsUnder.addListener(removeSidebar)
+

@@ -17,7 +17,7 @@
 }
 
 .section1 {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .section-search {
@@ -121,7 +121,7 @@ footer p{
 
 .card {
   border-radius: 30px;
-  margin-bottom: 120px;
+  margin-bottom: 50px;
   width: 28vw;
   height: 350px;
   min-width: 201px;
@@ -167,12 +167,17 @@ footer p{
 }
 
 #rowSearchTitle {
+  padding-top: 10px;
   bottom: 2vh;
 }
 
 .column {
   min-width: 225px;
   max-width: 300px;
+}
+
+li {
+  list-style-type: none;
 }
 
 /* header CSS */
@@ -206,6 +211,11 @@ nav {
   position: relative;
 }
 
+#home {
+  color: white;
+  font-weight: bold;
+}
+
 .nav-links li a::after {
   content: '';
   background: rgb(128, 0, 0);
@@ -219,6 +229,12 @@ nav {
 
 .nav-links li a:hover::after {
   width: 100%;
+}
+
+.results {
+  font-weight: bold;
+  color: rgb(128, 0, 0);
+  padding-left: 25px;
 }
 
 nav a {
@@ -263,14 +279,34 @@ nav a {
   }
 }
 
-@media screen and (max-width: 1476px) {
-  .section1 {
-    padding-top: 15%;
-  }
-}
-
 @media screen and (max-width: 751px) {
-  /* TODO: sidebar position */
+  nav, footer {
+    width: 100%;
+  }
+  #side-navigation-bar {
+    text-align: center;
+    background-color: #4A4949;
+  }
+  .dropdown-btn {
+    display: none;
+  }
+  #top10 {
+    display: none;
+  }
+  #contact {
+    display: none;
+  }
+  #side-navigation-bar li, #side-navigation-bar a {
+    color: white;
+  }
+  .results {
+    display: none;
+  }
+  .rowTitle {
+    float: none;
+    text-align: center;
+  }
+
 }
 
 @media screen and (max-width: 591px) {
