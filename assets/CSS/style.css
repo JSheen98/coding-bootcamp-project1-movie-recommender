@@ -154,7 +154,7 @@ footer p{
   display: flex;
   position: relative;
   /* left: 27vw; TODO */
-  height: 40px;
+  /* height: 40px; */
   font-size: 1.8em;
 }
 
@@ -221,7 +221,7 @@ nav {
   width: 100%;
 }
 
-nav h3 {
+nav a {
   padding-left: 15%;
 }
 
@@ -278,12 +278,14 @@ nav h3 {
     display: flex;
     flex-direction: column;
   }
-  nav h3 {
+  nav a {
     padding-top: 10px;
     padding-left: 0;
   }
 }
 
 @media screen and (max-width: 360px) {
-  /* TODO: button-size  */
+  #map-button {
+    font-size: 12px;
+  }
 }

@@ -4,173 +4,164 @@
 
 <head>
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Recommender</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="./assets/CSS/style.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Recommender</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/CSS/style.css" />
 </head>
 
 <body>
 
-    <!--Header-->
-    <div class="header">
-        <nav>
+  <!--Header-->
+  <div class="header">
+    <nav>
 
-            <a id="home" href="index.html">🎞️ Movie Recommender 🎞️ </a>
-            <ul class="nav-links">
-                <li><a href="https://developers.google.com/maps/" target="_blank">Google API</a> </li>
-                <li><a href="https://www.themoviedb.org/documentation/api" target="_blank"> TMDB API</a> </li>
-            </ul>
-        </nav>
+      <a id="home" href="index.html">🎞️ Movie Recommender 🎞️ </a>
+      <ul class="nav-links">
+        <li><a href="https://developers.google.com/maps/" target="_blank">Google API</a> </li>
+        <li><a href="https://www.themoviedb.org/documentation/api" target="_blank"> TMDB API</a> </li>
+      </ul>
+    </nav>
 
+  </div>
+
+  <!-- Side navigation element -->
+  <div class="sidenav">
+
+    <form id="submit-form" action="">
+      <input id="myInput" class="input is-rounded" type="text" placeholder="Search...">
+      <button id="myBtn" onclick="" id="search-btn" type="submit">🔍</button>
+    </form>
+
+
+    <a id=top10>Top 10</a>
+    <button class="dropdown-btn">Genres <i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container">
+      <a id="28" class="option">Action</a>
+      <a id="12" class="option">Adventure</a>
+      <a id="16" class="option">Animation</a>
+      <a id="35" class="option">Comedy</a>
+      <a id="80" class="option">Crime</a>
+      <a id="99" class="option">Documentary</a>
+      <a id="18" class="option">Drama</a>
+      <a id="10751" class="option">Family</a>
+      <a id="14" class="option">Fantasy</a>
+      <a id="36" class="option">History</a>
+      <a id="27" class="option">Horror</a>
+      <a id="10402" class="option">Music</a>
+      <a id="9648" class="option">Mystery</a>
+      <a id="10749" class="option">Romance</a>
+      <a id="878" class="option">Science Fiction</a>
+      <a id="53" class="option">Thriller</a>
+      <a id="10752" class="option">War</a>
     </div>
+    <a id="about" href="#about-footer">About</a>
+    <a id="contact" href="Contact.html">Contact</a>
+    <Recent id="recent-searches">Recent Searches</ul>
 
-    <!-- Side navigation element -->
-    <div class="sidenav">
 
-        <form id="submit-form" action="">
-            <input id="myInput" class="input is-rounded" type="text" placeholder="Search...">
-            <button id="myBtn" onclick="" id="search-btn" type="submit">🔍</button>
-        </form>
-          
+  </div>
 
-      <a id=top10>Top 10</a>
-      <button class="dropdown-btn">Genres <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-container">
-        <a id="28" class="option">Action</a>
-        <a id="12" class="option">Adventure</a>
-        <a id="16" class="option">Animation</a>
-        <a id="35" class="option">Comedy</a>
-        <a id="80" class="option">Crime</a>
-        <a id="99" class="option">Documentary</a>
-        <a id="18" class="option">Drama</a>
-        <a id="10751" class="option">Family</a>
-        <a id="14" class="option">Fantasy</a>
-        <a id="36" class="option">History</a>
-        <a id="27" class="option">Horror</a>
-        <a id="10402" class="option">Music</a>
-        <a id="9648" class="option">Mystery</a>
-        <a id="10749" class="option">Romance</a>
-        <a id="878" class="option">Science Fiction</a>
-        <a id="53" class="option">Thriller</a>
-        <a id="10770" class="option">TV Movie</a>
-        <a id="10752" class="option">War</a>
-        <a id="37" class="option">Western</a>
-      </div>
-      <a id="about" href="#about-footer">About</a>
-      <a id="contact" href="Contact.html">Contact</a>
-      <Recent id="recent-searches">Recent Searches</ul>
- 
+  <!-- Modal button -->
+  <button id="map-button" class="button is-primary">Search for Movie Theaters with Google Maps!</button>
 
+  <!-- Map Modal -->
+  <div id="map-modal" class="modal">
+    <div id="map-modal-bg" class="modal-background"></div>
+    <div id="map-modal-window" class="modal-content has-background-white py-5 px-5">
+      <h3 class="title mb-6">Search for nearby movie theaters</h3>
+      <p>Hint: Type a location or keyword (such as 'theater') in the search, and press enter!</p>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+      <div id="map"></div>
     </div>
+  </div>
 
-    <!-- Modal button -->
-    <button id="map-button" class="button is-primary">Search for Movie Theaters with Google Maps!</button>
+  <!-- Movie 'Card' Holder -->
+  <section class="section-search">
 
-    <!-- Map Modal -->
-    <div id="map-modal" class="modal">
-        <div id="map-modal-bg" class="modal-background"></div>
-        <div id="map-modal-window" class="modal-content has-background-white py-5 px-5">
-            <h3 class="title mb-6">Search for nearby movie theaters</h3>
-            <p>Hint: Type a location or keyword (such as 'theater') in the search, and press enter!</p>
-            <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
-            <div id="map"></div>
+    <div id="search-title">
+    </div>
+    <div id="containerSearch">
+      <div class="columns is-multiline is-mobile">
+        <div id="card-1" class="column is-one-fifth">
         </div>
-    </div>
-
-    <!-- Movie 'Card' Holder -->
-
-    <section class="section-search">
-
-      <div id="search-title">
-        <!-- <h3 id="rowSearchTitle" class="rowTitle">Search Results...</h3> -->
-      </div>
-      <div id="containerSearch">
-        <div class="columns is-multiline is-mobile">
-          <div id="card-1" class="column is-one-fifth">
-            <!-- <div id="card-1" class="img-fit card"></div> -->
-          </div>
-          <div id="card-2" class="column is-one-fifth">
-            <!-- <div id="card-2" class="img-fit card"></div> -->
-          </div>
-          <div id="card-3" class="column is-one-fifth">
-            <!-- <div id="card-3" class="img-fit card"></div> -->
-          </div>
-          <div id="card-4" class="column is-one-fifth">
-            <!-- <div id="card-4" class="img-fit card"></div> -->
-          </div>
-          <div id="card-5" class="column is-one-fifth">
-            <!-- <div id="card-5" class="img-fit card"></div> -->
-          </div>
+        <div id="card-2" class="column is-one-fifth">
+        </div>
+        <div id="card-3" class="column is-one-fifth">
+        </div>
+        <div id="card-4" class="column is-one-fifth">
+        </div>
+        <div id="card-5" class="column is-one-fifth">
         </div>
       </div>
+    </div>
   </section>
 
-    <section class="section1">
-        <div id="row1Title" class="rowTitle">Top 5 Movies Now Playing in Theaters</div>
-        <div id="container1">
-            <div class="columns is-multiline is-mobile">
-                <div class="column is-one-fifth">
-                  <div class="img-fit card"></div>
-                </div>
-                <div class="column is-one-fifth">
-                  <div class="img-fit card"></div>
-                </div>
-                <div class="column is-one-fifth">
-                  <div class="img-fit card"></div>
-                </div>
-                <div class="column is-one-fifth">
-                  <div class="img-fit card"></div>
-                </div>
-                <div class="column is-one-fifth">
-                  <div class="img-fit card"></div>
-                </div>
-            </div>
+  <section class="section1">
+    <div id="row1Title" class="rowTitle">Top 5 Movies Now Playing in Theaters</div>
+    <div id="container1">
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
         </div>
-    </section>
-
-    <section class="section2">
-        <div id="row2Title" class="rowTitle"></div>
-        <div id="container2">
-          <div class="columns is-multiline is-mobile">
-            <div class="column is-one-fifth">
-              <div class="img-fit card"></div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="img-fit card"></div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="img-fit card"></div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="img-fit card"></div>
-            </div>
-            <div class="column is-one-fifth">
-              <div class="img-fit card"></div>
-            </div>
-          </div>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
         </div>
-    </section>
-
-    <footer id="about-footer" class="footer has-background-dark has-text-white is-align-content-end">
-        <div class="content has-text-centered">
-            <p>
-                <strong class="has-text-white">🎞️ Movie Recommender 🎞️</strong> by Devon Ethington, Dukane Golder,
-                Daniel Jenkins, Mason Aviano, and Jackson Sheen
-            </p>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
         </div>
-    </footer>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div id="row2Title" class="rowTitle"></div>
+    <div id="container2">
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
+        </div>
+        <div class="column is-one-fifth">
+          <div class="img-fit card"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="about-footer" class="footer has-background-dark has-text-white is-align-content-end">
+    <div class="content has-text-centered">
+      <p>
+        <strong class="has-text-white">🎞️ Movie Recommender 🎞️</strong> by Devon Ethington, Dukane Golder,
+        Daniel Jenkins, Mason Aviano, and Jackson Sheen
+      </p>
+    </div>
+  </footer>
 
 
-    <!-- Script links -->
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApfzRyHOsuR2emj4jpBPOvezNP1xFDm28&callback=initAutocomplete&libraries=places&v=weekly"
-        defer></script>
-    <script src="./assets/JS/tmdbapi.js"></script>
-    <script src="./assets/JS/googapi.js"></script>
-    <script src="./assets/JS/script.js"></script>
+  <!-- Script links -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApfzRyHOsuR2emj4jpBPOvezNP1xFDm28&callback=initAutocomplete&libraries=places&v=weekly"
+    defer></script>
+  <script src="./assets/JS/tmdbapi.js"></script>
+  <script src="./assets/JS/googapi.js"></script>
+  <script src="./assets/JS/script.js"></script>
 </body>
 
 </html>
