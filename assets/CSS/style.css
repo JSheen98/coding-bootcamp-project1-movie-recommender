@@ -153,13 +153,15 @@ footer p{
   float: right;
   display: flex;
   position: relative;
-  /* left: 27vw; TODO */
-  /* height: 40px; */
   font-size: 1.8em;
 }
 
 #row1Title {
   bottom: 5vh;
+}
+
+#genre {
+  padding-left: 0;
 }
 
 #row2Title {
@@ -188,8 +190,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding-left: 500px;  TODO*/
-  /* padding-right: 50px; TODO*/
   background-color: #4a4949;
   color: #f7f1f1;
   font-size: 25px;
