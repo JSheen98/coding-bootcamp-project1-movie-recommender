@@ -157,7 +157,7 @@ footer p{
 }
 
 #row1Title {
-  bottom: 5vh;
+  bottom: 2.5vh;
 }
 
 #genre {
@@ -165,12 +165,12 @@ footer p{
 }
 
 #row2Title {
-  bottom: 5vh;
+  bottom: 2.5vh;
 }
 
 #rowSearchTitle {
   padding-top: 10px;
-  bottom: 2vh;
+  bottom: 1.5vh;
 }
 
 .column {
